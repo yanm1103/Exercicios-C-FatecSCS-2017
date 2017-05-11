@@ -8,10 +8,13 @@ void main(){
 	setlocale(LC_ALL,"portuguese");
 	printf("Digite o número: ");
 	scanf("%i",&numero);
-	if (numero % 6 == 0){
+	if (numero % 6 == 0 && numero % 3 == 0){
+		printf("Seu número é divisível por 3 e por 6");
+	}
+	else if (numero % 6 == 0){
 		printf("Seu número é divisível por 6.\n");
 	}
-	if (numero % 3 == 0){
+	else if (numero % 3 == 0){
 		printf("Seu número é divisível por 3.\n");
 	}
 	else {
