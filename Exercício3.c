@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-void main(){
+void main()
+{
 	setlocale(LC_ALL,"portuguese");
 	float base = 0, altura = 0,area = 0, diagonal = 0, perimetro = 0;
 	printf("Insira a base do retângulo: ");
