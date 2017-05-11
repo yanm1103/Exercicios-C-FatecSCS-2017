@@ -17,4 +17,5 @@ void main(){
 	perimetro = 2 * (base * altura);
 	printf("Sua área é de %.1f\nSua diagonal é de %.1f\nSeu perímetro é de %.1f\n",area,diagonal,perimetro);
 	_getch();
+	
 }
