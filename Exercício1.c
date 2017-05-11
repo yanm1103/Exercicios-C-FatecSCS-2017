@@ -5,7 +5,7 @@
 #include <locale.h>
 void main(){
 	setlocale(LC_ALL,"portuguese");
-	float PI,A = 0;
+	float PI = 0, A = 0;
 	char sexo = 0;
 	do {
 		printf("Digite o sexo (M/F): ");
