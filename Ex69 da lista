@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+main (){
+	setlocale(LC_ALL,"portuguese");
+	int cont,x;
+	char nome[30];
+	printf("Insira o nome (máximo de 30 caracteres): ");
+	fflush(stdin);
+	scanf("%s",nome);
+	printf("Exercício A \n\n");
+	for (cont = 30; cont >= 0; cont--){
+		printf("%c",nome[cont]);
+	}
+	printf("\n---------------------\n");
+	printf("Exercício B \n\n");
+	for (cont = strlen(nome); cont >= 0; cont--){
+		printf("%c",nome[cont]);
+	}
+	printf("\n---------------------\n");
+	printf("Exercício C \n\n");
+	for (cont = 0;cont <= strlen(nome); cont++){
+		if (nome[cont] == 'a' || nome[cont] == 'e' || nome[cont] == 'i' || nome[cont] == 'o' || nome[cont] == 'u'){
+		printf("%c",nome[cont]);
+		}
+	}
+	printf("\n---------------------\n");
+	printf("Exercício D \n\n");
+	for (cont = 0;cont <= strlen(nome); cont++){
+		if (nome[cont] != 'a' && nome[cont] != 'e' && nome[cont] != 'i' && nome[cont] != 'o' && nome[cont] != 'u'){
+		printf("%c",nome[cont]);
+		}
+	}
+}
