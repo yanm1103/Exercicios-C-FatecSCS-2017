@@ -1,17 +1,14 @@
 #include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-int tentativas = 0;
-char *senha[5],*senhavalida[5];
+int tentativas = 0,passou = 0;
+char senha[5],senhavalida[5] = "teste";
 void main() {
-	*senhavalida = "teste";
 	do{
 		printf("Insira a senha: ");
-		scanf("%s",&senha);
-		getchar();
-		if (!strcmp(senha, "teste")){
+		fflush(stdin);
+		scanf("%s",&senha[0]);
+		if (strcmp(senha, senhavalida) == 0){
 			printf("ACESSO GARANTIDO\n");
 			printf("Conseguiu acessar depois de %i tentativas.\n",tentativas);
 			break;
@@ -20,5 +17,5 @@ void main() {
 			printf("ACESSO NEGADO\n");
 			tentativas++;
 		}
-	}while (senha != senhavalida);
+	}while (passou == 0);
 }
